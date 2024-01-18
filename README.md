@@ -19,3 +19,10 @@ So many people love to play their favorite trading card games online, but they r
 *  Interactive battlefield that updates for both players in real time.
 * Public rankings for players, and for popular cards/decks.
 
+## Technology
+
+* HTML - HTML will be used to structure the website. There will be X HTML pages, for login, for profile, for the deck builder, for the battlefield, and for the home page with the rankings. 
+* CSS - CSS will be used to design and theme the site, so that it looks cool and consistent across all platforms.
+* Javascript - Javascript will be used for login, interactive deck building, interactive game-playing, and scores.
+* AWS - Amazon webservices will host the site. Their servers will store people's profile information, saved decks, and scores.
+* Websocket - Enables realtime multiplayer interaction on the game field.
