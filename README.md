@@ -3,7 +3,12 @@
 ### Elevator Pitch
 So many people love to play their favorite trading card games online, but they run into paywalls, or there just isn’t a suitable software available! This is *Clash!* A site made for that exact reason. It is an easily customizable deck builder with an interactive multiplayer battlefield, complete with a pre-existing database of cards for the game *Mythic Magic Monsters*, created by me. It will make this fun and exciting card game available to everyone who wants to play it, completely free of charge!
 
+This is a rough sketch of the battlefield for the game.
+
 ![Battlefield](BattlefieldMockup.jpg)
+
+And this is a rough sketch of the deck builder interface.
+
 ![DeckBuilderMockup](DeckBuilderMockup.jpg)
 
 ### Key Features
