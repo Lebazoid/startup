@@ -17,7 +17,7 @@ And this is a rough sketch of the deck builder interface.
 
 * Secure login and profile creation.
 
-* A powerful deck editor, complete with card visuals, quick adding and quick removing cards, sorting and save functions.
+* A powerful deck editor, complete with card visuals, quick adding and quick removing cards, sorting and save functions. Users can simply click to add the cards they want to their deck.
 
 * A profile page where users can save and showcase the decks they've made, as well as flaunt that incredible win record.
 
