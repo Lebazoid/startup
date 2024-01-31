@@ -1,6 +1,6 @@
 # Startup
 ## Specification Deliverable
-*Note from the Developer* - Since this is quite an ambitious project, and I have a very busy semester, this project will be getting toned down and potentially changed outright in many ways. I'm still working on the specifics, but I will have that figured out by tomorrow, as I want to work on the project consistently this week. I will be laying out some base html that could apply to most any webpage tonight, and filling it in once an idea is fully cemented and ready to be committed to. 
+*Note from the Developer* - Since this is quite an ambitious project, and I have a very busy semester, this project will be getting toned down to a simpler one. I have not edited this startup deliverable yet, but I will soon. Basically, the website will be a homepage for my novel, with links to an interactive map, character bios, a link to buy the book, and even the first chapter for free! I might also plug my music in there :) toodaloo!
 ### Elevator Pitch
 
 
