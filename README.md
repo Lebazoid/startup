@@ -3,7 +3,7 @@
 *Note from the Developer* - Since this is quite an ambitious project, and I have a very busy semester, this project will be getting toned down to a simpler one. I have not edited this startup deliverable yet, but I will soon. Basically, the website will be a homepage for my novel, with links to an interactive map, character bios, a link to buy the book, and even the first chapter for free! I might also plug my music in there :) toodaloo!
 ### Elevator Pitch
 
-
+Mythical Magical Monsters is the place to be to explore everything about King of the Beasts, the thrilling fantasy novel by Caleb Lay! Not every book series has its own dedicated website, and the ones that do don't give you an opportunity to get to know the magical world and characters that they will be reading about. 
 
 So many people love to play their favorite trading card games online, but they run into paywalls, or there just isn’t a suitable software available! This is *Clash!* A site made for that exact reason. It is an easily customizable deck builder with an interactive multiplayer battlefield, complete with a pre-existing database of cards for the game *Mythic Magic Monsters*, created by me. It will make this fun and exciting card game available to everyone who wants to play it, completely free of charge!
 
