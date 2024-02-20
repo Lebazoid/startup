@@ -1,0 +1,91 @@
+body {
+    background-color: #00d0ff; /* Change this to your desired background color */
+    font-family: Arial, serif; /* Example font family */
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #008080;
+    color: #f0f0f0;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+  
+  header h2 {
+    margin: 0;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #333; /* Change this to your desired color */
+  }
+  
+  header a:hover {
+    color: #555; /* Change this to your desired hover color */
+  }
+  
+  /* Login Button Styling */
+  header a[href="login.html"] {
+    margin-right: 20px;
+  }
+  
+  /* Main Styling */
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Synopsis Styling */
+  #synopsis {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Book Image Styling */
+  #BookImage {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Links Section Styling */
+  #links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .link-section {
+    flex-basis: 30%; /* Adjust the width of each link section as needed */
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .link-section h2 a {
+    text-decoration: none;
+    color: #ff0000; /* Change this to your desired color */
+  }
+  
+  .link-section h2 a:hover {
+    color: #555; /* Change this to your desired hover color */
+  }
+  
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-link {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .footer-link img {
+    width: 40px; /* Adjust the size of the icons as needed */
+    height: 40px;
+  }
