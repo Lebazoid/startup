@@ -1,36 +1,39 @@
 body {
-    background-color: #00d0ff; /* Change this to your desired background color */
-    font-family: Arial, serif; /* Example font family */
-  }
-  
-  /* Header Styling */
-  header {
-    background-color: #008080;
-    color: #f0f0f0;
-    padding: 20px;
-    position: relative;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-  }
-  
-  header h2 {
-    margin: 0;
-  }
-  
-  header a {
-    text-decoration: none;
-    color: #333; /* Change this to your desired color */
-  }
-  
-  header a:hover {
-    color: #555; /* Change this to your desired hover color */
-  }
-  
-  /* Login Button Styling */
-  header a[href="login.html"] {
-    margin-right: 20px;
-  }
+  background-color: #e1c699; /* Change this to your desired background color */
+  font-family: Arial, sans-serif; /* Example font family */
+}
+
+header {
+  background-color: #A67A5B;
+  color: #f0f0f0;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+header h2 {
+  margin: 0;
+}
+
+header a {
+  text-decoration: none;
+  color: #100000; /* Change this to your desired color */
+}
+
+header a:hover {
+  color: #555; /* Change this to your desired hover color */
+}
+
+/* Login Button Styling */
+header h3[href="login.html"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  margin-right: 100px;
+}
   
   /* Main Styling */
   main {
@@ -47,7 +50,7 @@ body {
   
   /* Book Image Styling */
   #BookImage {
-    text-align: center;
+    align-items: center;
     margin-top: 20px;
   }
   
@@ -67,7 +70,7 @@ body {
   
   .link-section h2 a {
     text-decoration: none;
-    color: #ff0000; /* Change this to your desired color */
+    color: #000000; /* Change this to your desired color */
   }
   
   .link-section h2 a:hover {
