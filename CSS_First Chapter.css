@@ -1,0 +1,51 @@
+body {
+    background-color: #e1c699; 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+}
+
+header h2 {
+    background-color: #A67A5B;
+    color: #f0f0f0;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #100000; 
+}
+
+header a:hover {
+    color: #555; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+article header h3 {
+    text-decoration: underline; /* Underline the text */
+}
+
+.pdf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+iframe {
+    width: 80%;
+    height: 80vh;
+}
