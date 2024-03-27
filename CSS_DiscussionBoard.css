@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #A67A5B; /* Main background color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0; /* Container background color */
+}
+
+.comment {
+    margin-bottom: 20px;
+    background-color: #ffffff; /* Comment background color */
+}
+
+.comment h3 {
+    margin-top: 0;
+    color: #333333; /* Comment text color */
+}
+
+.comment p {
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 20px;
+    background-color: #ffffff; /* Form background color */
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #007bff; /* Form button background color */
+    color: #fff; /* Form button text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3; /* Form button hover background color */
+}

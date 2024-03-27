@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Board</title>
+    <link rel="stylesheet" type="text/css" href="CSS_DiscussionBoard.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Discussion Board</h1>
+    
+    <!-- Comments Section -->
+    <div class="comments">
+        <div class="comment">
+            <h3>User1</h3>
+            <p>Hello! This is a comment!</p>
+        </div>
+        <div class="comment">
+            <h3>User2</h3>
+            <p>Hello! This is another comment!</p>
+        </div>
+        <!-- More comments can go here -->
+    </div>
+    
+    <!-- Add Comment Form -->
+    <form>
+        <label for="username">Your Name:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="comment">Your Comment:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>
