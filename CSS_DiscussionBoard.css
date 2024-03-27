@@ -52,5 +52,5 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #0056b3; /* Form button hover background color */
+    background-color: #000000; /* Form button hover background color */
 }

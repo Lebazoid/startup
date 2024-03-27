@@ -11,3 +11,4 @@ Basic things I've learned
 Colors:
 * Background #e1c699
 * Accent #A67A5B
+* 
