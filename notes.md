@@ -6,3 +6,8 @@ Basic things I've learned
 * always be ballin
 * Figure out how to configure the interactive map to be well... interactive.
 * Figure out how to insert a pdf or something of the first chapter, so that I don't have to format it with html alone
+
+## CSS notes
+Colors:
+* Background #e1c699
+* Accent #A67A5B
