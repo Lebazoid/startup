@@ -10,30 +10,40 @@
     <header>
         <h2><a href="index.html">King of the Beasts - A novel by Caleb Lay</a></h2>
         <link rel="stylesheet" type="text/css" href="CSS_Login.css">
-      </header>
-      <hr>
+    </header>
+    <hr>
     <header>
         <h1>Login</h1>
-        
+
     </header>
     <main>
-        <p>
-            Username:
-        </p>
-        <p>
-            Password:
-        </p>
-        <p>
-            (Log In (Placeholder))
-        </p>
+        <form id="loginForm">
+            <p>
+                Username: <input type="text" id="username">
+            </p>
+            <p>
+                Password: <input type="password" id="password">
+            </p>
+            <p>
+                <input type="submit" value="Log In" id="loginButton">
+            </p>
+        </form>
     </main>
-
-    </article>
 
     <!-- Footer -->
     <footer>
-        
+
     </footer>
+
+    <script>
+        
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault(); 
+            var username = document.getElementById("username").value; 
+            
+            window.location.href = "Discussion Board.html"; // Currently just redirects.
+        });
+    </script>
 
 </body>
 
