@@ -38,6 +38,7 @@ body {
   
   .character {
     width: 100%;
+    position: relative; /*Edited*/
   }
   
   .character-image {
@@ -58,7 +59,10 @@ body {
     text-align: center; /* Center the text horizontally */
     outline: none;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.5s;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   
   .collapsible:hover {
@@ -66,10 +70,10 @@ body {
   }
   
   .content {
-    display: none;
-    padding: 18px;
     overflow: hidden;
-    background-color: #f9f9f9;
+    background-color: #e4f5ff;
+    max-height: 0;
+    transition: max-height 0.5s ease; /* Add animation for max-height */
   }
   
   .content p {
@@ -77,13 +81,31 @@ body {
   }
   
   .collapsible.active + .content {
-    display: block;
+    max-height: 1000px;
   }
-  
+
   .character-name {
     display: block;
     margin-top: 10px;
   }
+
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-link {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .footer-link img {
+    width: 40px; 
+    height: 40px;
+  }
+
+ 
   
 
 @media screen and (max-width: 1375px) {

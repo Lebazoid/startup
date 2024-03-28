@@ -34,6 +34,12 @@ header h3[href="login.html"] {
   padding: 10px;
   margin-right: 100px;
 }
+
+  .Github-image img {
+    width: auto;
+    height: 100px;
+  }
+
   
   /* Main Styling */
   main {
