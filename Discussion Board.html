@@ -7,16 +7,39 @@
     <link rel="stylesheet" type="text/css" href="CSS_DiscussionBoard.css">
     <script>
         window.onload = function () {
-            setInterval(() => {
-                let chat = 'Placeholder Comment'; //Mimics Real conversation
-                const commentContainer = document.querySelector('.comments');
+            const commentForm = document.querySelector('form');
+            const commentInput = document.getElementById('comment');
+            const usernameInput = document.getElementById('username');
+            const commentContainer = document.querySelector('.comments');
+
+            commentForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission behavior
+                const username = usernameInput.value;
+                const comment = commentInput.value;
+
+                if (username.trim() && comment.trim()) {
+                    addComment(username, comment);
+                    // Resets form fields after submitting
+                    usernameInput.value = '';
+                    commentInput.value = '';
+                } else {
+                    alert('Please fill in both username and comment fields.');
+                }
+            });
+
+            function addComment(username, comment) {
                 const newComment = document.createElement('div');
                 newComment.classList.add('comment');
                 newComment.innerHTML = `
-                    <h3>Placeholder User</h3>
-                    <p>${chat}</p> 
+                    <h3>${username}</h3>
+                    <p>${comment}</p> 
                 `;
                 commentContainer.appendChild(newComment);
+            }
+
+            setInterval(() => {
+                let chat = 'Placeholder Comment'; //Mimics Real conversation
+                addComment('Placeholder User', chat);
             }, 5000);
         }
     </script>
