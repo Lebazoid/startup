@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discussion Board</title>
     <link rel="stylesheet" type="text/css" href="CSS_DiscussionBoard.css">
+    <script>
+        window.onload = function () {
+            setInterval(() => {
+                let chat = 'Placeholder Comment'; //Mimics Real conversation
+                const commentContainer = document.querySelector('.comments');
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.innerHTML = `
+                    <h3>Placeholder User</h3>
+                    <p>${chat}</p> 
+                `;
+                commentContainer.appendChild(newComment);
+            }, 5000);
+        }
+    </script>
 </head>
 <body>
 
