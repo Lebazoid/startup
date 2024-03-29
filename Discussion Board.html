@@ -5,72 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discussion Board</title>
     <link rel="stylesheet" type="text/css" href="CSS_DiscussionBoard.css">
-    <script>
-        window.onload = function () {
-            const commentForm = document.querySelector('form');
-            const commentInput = document.getElementById('comment');
-            const usernameInput = document.getElementById('username');
-            const commentContainer = document.querySelector('.comments');
-
-            commentForm.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent the default form submission behavior
-                const username = usernameInput.value;
-                const comment = commentInput.value;
-
-                if (username.trim() && comment.trim()) {
-                    addComment(username, comment);
-                    // Resets form fields after submitting
-                    usernameInput.value = '';
-                    commentInput.value = '';
-                } else {
-                    alert('Please fill in both username and comment fields.');
-                }
-            });
-
-            function addComment(username, comment) {
-                const newComment = document.createElement('div');
-                newComment.classList.add('comment');
-                newComment.innerHTML = `
-                    <h3>${username}</h3>
-                    <p>${comment}</p> 
-                `;
-                commentContainer.appendChild(newComment);
-            }
-
-            setInterval(() => {
-                let chat = 'Placeholder Comment'; //Mimics Real conversation
-                addComment('Placeholder User', chat);
-            }, 5000);
-        }
-    </script>
 </head>
 <body>
-
 <div class="container">
     <h1>Discussion Board</h1>
-    
     <!-- Comments Section -->
     <div class="comments">
-        <div class="comment">
-            <h3>User1</h3>
-            <p>Hello! This is a comment!</p>
-        </div>
-        <div class="comment">
-            <h3>User2</h3>
-            <p>Hello! This is another comment!</p>
-        </div>
-        <!-- More comments go here -->
+        <!-- Existing comments -->
     </div>
-    
     <!-- Add Comment Form -->
     <form>
         <label for="username">Your Name:</label>
-        <input type="text" id="username" name="username" required>
+        <!-- Display the username from sessionStorage -->
+        <input type="text" id="username" name="username" disabled>
         <label for="comment">Your Comment:</label>
         <textarea id="comment" name="comment" rows="4" required></textarea>
         <input type="submit" value="Submit">
     </form>
 </div>
-
+<script>
+    window.onload = function () {
+        const commentForm = document.querySelector('form');
+        const commentInput = document.getElementById('comment');
+        const usernameInput = document.getElementById('username');
+        const commentContainer = document.querySelector('.comments');
+        
+        // Retrieve username from sessionStorage
+        var username = sessionStorage.getItem('username');
+        // Set the value of the input field
+        usernameInput.value = username;
+        
+        commentForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            const username = usernameInput.value;
+            const comment = commentInput.value;
+            if (username.trim() && comment.trim()) {
+                addComment(username, comment);
+                // Resets form fields after submitting
+                commentInput.value = '';
+            } else {
+                alert('Please fill in both username and comment fields.');
+            }
+        });
+        
+        function addComment(username, comment) {
+            const newComment = document.createElement('div');
+            newComment.classList.add('comment');
+            newComment.innerHTML = `
+                    <h3>${username}</h3>
+                    <p>${comment}</p> 
+                `;
+            commentContainer.appendChild(newComment);
+        }
+        
+        // Additional code for automatic comment insertion
+        setInterval(() => {
+            let chat = 'Placeholder Comment'; //Mimics Real conversation
+            addComment('Placeholder User', chat);
+        }, 5000);
+    }
+</script>
 </body>
 </html>

@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Login</title>
 </head>
-
 <body>
     <!-- Header-->
     <header>
@@ -14,7 +12,6 @@
     <hr>
     <header>
         <h1>Login</h1>
-
     </header>
     <main>
         <form id="loginForm">
@@ -29,28 +26,21 @@
             </p>
         </form>
     </main>
-
     <!-- Footer -->
     <footer>
-
     </footer>
-
     <script>
-        
         document.getElementById("loginForm").addEventListener("submit", function (event) {
             event.preventDefault(); 
             var username = document.getElementById("username").value; 
             var password = document.getElementById("password").value;
-            // Code will be implemented here soon for authentication!
-            // It will send a request to the database to check if the username and password are a matching pair.
-            // If they are, the user will be directed to the discussion board.
-            // If there are any issues (username does not exist, incorrect password), an error message will be displayed for the user.
-            // yuh
-            
-            window.location.href = "Discussion Board.html"; // Currently just redirects.
+            // Code for authentication will be implemented here
+            // For now, assume authentication is successful
+            // Store username in sessionStorage
+            sessionStorage.setItem("username", username);
+            // Redirect to discussion board
+            window.location.href = "Discussion Board.html";
         });
     </script>
-
 </body>
-
 </html>
