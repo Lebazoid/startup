@@ -43,3 +43,11 @@ The map of Aldea features, well, a map. It also has no functionality, and may ev
 The "Get to Know the Characters!" link leads to a page where the 12 most prominent characters in the book are neatly arranged in a grid! This grid is complete with images of the characters, and will move from 3x4 on a large screen, to 2x6 on smaller screens, to even 1x12 on mobile phones screens.
 
 ## Javascript Deliverable
+This deliverable added some much-needed functinonality to the site. I added a whole bunch of Javascript that made the website interactable for a single user. 
+
+* <b>Login:</b> When you click on "Discussion Board" from the main page, the user will be directed to a login page. Currently, the login page only mimics authentication. The user can input any username and it will be displayed on the next page. If the username or password field is blank however, it will alert the user that they must enter a username or password. Since the page currently only simulates authentication, the login button currently redirects the user to the discussion board page. 
+* <b>database:</b> When a user enters a username, it will be displayed as their name on the discussion board. Currently this username is stored and retrieved from local storage, but it will be replaced by database data later.
+* Websocket:</b> I used a setInterval function to periodically add a "Placeholder Comment" from a "Placeholder user." This will be replaced with websocket messages later."
+* <b>Application Logic:</b> When a new comment appears on the discussion board, the user's screen will automatically scroll to the bottom to see the new message.
+
+* <b>Other functionality added for fun:</b> On the 'Meet the Characters' page, clicking on a characters image will open a collapsible with a smooth animation, containing a brief description of the character. These plus the map should give people some things to talk about even without reading the full book. You can read those and learn about the characters I've made! They're very cool, and they don't bite. My favorite is Ezlo. Who is yours?
