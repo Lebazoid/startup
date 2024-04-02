@@ -14,7 +14,7 @@
 <div class="container">
     <h1>Discussion Board</h1>
     <!-- Comments Section -->
-    <div class="comments">
+    <div class="comments" id="comment-container">
         <!-- Existing comments -->
     </div>
     <!-- Add Comment Form -->
@@ -32,7 +32,7 @@
         const commentForm = document.querySelector('form');
         const commentInput = document.getElementById('comment');
         const usernameInput = document.getElementById('username');
-        const commentContainer = document.querySelector('.comments');
+        const commentContainer = document.getElementById('comment-container');
         
         // Retrieve username from sessionStorage
         var username = sessionStorage.getItem('username');
@@ -45,6 +45,8 @@
             const comment = commentInput.value;
             if (username.trim() && comment.trim()) {
                 addComment(username, comment);
+                // Scrolls to the newly added comment
+                document.getElementById('comment-' + (document.querySelectorAll('.comment').length - 1)).scrollIntoView({behavior: 'smooth'});
                 // Resets form fields after submitting
                 commentInput.value = '';
             } else {
@@ -55,6 +57,8 @@
         function addComment(username, comment) {
             const newComment = document.createElement('div');
             newComment.classList.add('comment');
+            const commentIndex = document.querySelectorAll('.comment').length;
+            newComment.id = 'comment-' + commentIndex;
             newComment.innerHTML = `
                     <h3>${username}</h3>
                     <p>${comment}</p> 
@@ -66,10 +70,12 @@
         setInterval(() => {
             let chat = 'Placeholder Comment'; //Mimics Real conversation
             addComment('Placeholder User', chat);
+            // Scrolls to the newly added comment
+            document.getElementById('comment-' + (document.querySelectorAll('.comment').length - 1)).scrollIntoView({behavior: 'smooth'});
         }, 5000);
     }
+    
 </script>
-</body>
 <footer>
 
     <p>I'm not just an author! I'm also a musician. Check out some of my other creative works here;</p>

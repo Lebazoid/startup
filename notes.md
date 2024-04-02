@@ -11,4 +11,6 @@ Basic things I've learned
 Colors:
 * Background #e1c699
 * Accent #A67A5B
-* 
+
+## Javascript Notes
+* Most functionality is in the discussion board. Implement further functionality as needed.
