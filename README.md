@@ -41,3 +41,5 @@ The discussion board link leads to a log in page that currently has no functions
 The map of Aldea features, well, a map. It also has no functionality, and may eventually be moved to the main page, but it is styled in unison as well.
 
 The "Get to Know the Characters!" link leads to a page where the 12 most prominent characters in the book are neatly arranged in a grid! This grid is complete with images of the characters, and will move from 3x4 on a large screen, to 2x6 on smaller screens, to even 1x12 on mobile phones screens.
+
+## Javascript Deliverable
