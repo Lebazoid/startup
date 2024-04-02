@@ -1,8 +1,30 @@
+header {
+    background-color: #A67A5B;
+    color: #f0f0f0;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+  
+  header h2 {
+    margin: 0;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #100000; 
+  }
+  
+  header a:hover {
+    color: #555; 
+  }
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #A67A5B; /* Main background color */
+    background-color: #e1c699; /* Main background color */
 }
 
 .container {
