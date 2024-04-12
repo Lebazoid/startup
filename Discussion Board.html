@@ -9,51 +9,76 @@
 <!-- Link to Home-->
 <header>
     <h2><a href="index.html">King of the Beasts - A novel by Caleb Lay</a></h2>
-  </header>
+</header>
 <body>
 <div class="container">
     <h1>Discussion Board</h1>
     <!-- Comments Section -->
     <div class="comments" id="comment-container">
-        <!-- Existing comments -->
+        <!-- Existing comments will be loaded here -->
     </div>
     <!-- Add Comment Form -->
-    <form>
+    <form id="commentForm">
         <label for="username">Your Name:</label>
         <!-- Display the username from sessionStorage -->
         <input type="text" id="username" name="username" disabled><br>
         <label for="comment">Your Comment:</label>
-        <textarea id="comment" name="comment" rows="4" required></textarea>
+        <textarea id="commentText" name="comment" rows="4" required></textarea>
         <input type="submit" value="Submit">
     </form>
 </div>
 <script>
     window.onload = function () {
-        const commentForm = document.querySelector('form');
-        const commentInput = document.getElementById('comment');
+        const commentForm = document.getElementById('commentForm');
+        const commentText = document.getElementById('commentText');
         const usernameInput = document.getElementById('username');
         const commentContainer = document.getElementById('comment-container');
-        
+
         // Retrieve username from sessionStorage
         var username = sessionStorage.getItem('username');
         // Set the value of the input field
         usernameInput.value = username;
-        
+
+        // Function to fetch comments from the server and display them
+        function fetchComments() {
+            fetch('/api/comments')
+                .then(response => response.json())
+                .then(comments => {
+                    comments.forEach(comment => {
+                        addComment(comment.username, comment.comment);
+                    });
+                })
+                .catch(error => console.error('Error fetching comments:', error));
+        }
+
+        // Fetch comments when the page loads
+        fetchComments();
+
+        // Submit form handler
         commentForm.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission behavior
             const username = usernameInput.value;
-            const comment = commentInput.value;
+            const comment = commentText.value;
             if (username.trim() && comment.trim()) {
                 addComment(username, comment);
-                // Scrolls to the newly added comment
-                document.getElementById('comment-' + (document.querySelectorAll('.comment').length - 1)).scrollIntoView({behavior: 'smooth'});
-                // Resets form fields after submitting
-                commentInput.value = '';
+                // Send comment to server
+                fetch('/api/comments', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, comment })
+                })
+                .then(response => response.json())
+                .then(newComment => console.log('New comment added:', newComment))
+                .catch(error => console.error('Error adding comment:', error));
+                // Resets form field after submitting
+                commentText.value = '';
             } else {
                 alert('Please fill in both username and comment fields.');
             }
         });
-        
+
         function addComment(username, comment) {
             const newComment = document.createElement('div');
             newComment.classList.add('comment');
@@ -65,8 +90,6 @@
                 `;
             commentContainer.appendChild(newComment);
         }
-        
-        // Additional code for automatic comment insertion
         setInterval(() => {
             let chat = 'Placeholder Comment'; //Mimics Real conversation
             addComment('Placeholder User', chat);
@@ -75,30 +98,30 @@
         }, 5000);
     }
     
+    
+
 </script>
 <footer>
-
     <p>I'm not just an author! I'm also a musician. Check out some of my other creative works here;</p>
-      <!-- Spotify Link -->
-      <div class="footer-link">
-          <a href="https://open.spotify.com/artist/1dysstVvD0tQM9OuTmmpMN">
-              <img src="LOGO_Spotify.png" alt="Spotify Link">
-          </a>
-      </div>
+    <!-- Spotify Link -->
+    <div class="footer-link">
+        <a href="https://open.spotify.com/artist/1dysstVvD0tQM9OuTmmpMN">
+            <img src="LOGO_Spotify.png" alt="Spotify Link">
+        </a>
+    </div>
 
-      <!-- Apple Music Link -->
-      <div class="footer-link">
-          <a href="https://music.apple.com/us/artist/caleb-lay/1463892463">
-              <img src="LOGO_AppleMusic.png" alt="Apple Music">
-          </a>
-      </div>
+    <!-- Apple Music Link -->
+    <div class="footer-link">
+        <a href="https://music.apple.com/us/artist/caleb-lay/1463892463">
+            <img src="LOGO_AppleMusic.png" alt="Apple Music">
+        </a>
+    </div>
 
-      <!-- Instagram Link -->
-      <div class="footer-link">
-          <a href="https://www.instagram.com/lebkazoo/">
-              <img src="LOGO_Instagram.png" alt="Instagram">
-          </a>
-        </div>
-      
-  </footer>
+    <!-- Instagram Link -->
+    <div class="footer-link">
+        <a href="https://www.instagram.com/lebkazoo/">
+            <img src="LOGO_Instagram.png" alt="Instagram">
+        </a>
+    </div>
+</footer>
 </html>
