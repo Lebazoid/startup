@@ -60,9 +60,10 @@ header h3[href="login.html"] {
   }
   
   /* Grab Book Styling*/
-  #Grab {
-    font-style: underline;
+  #GrabBook {
+    text-decoration: underline;
   }
+
   /* Book Image Styling */
   #Book Image {
     display: flex;
