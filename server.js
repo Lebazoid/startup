@@ -14,9 +14,9 @@ app.use('/api', apiRouter);
 
 // Array to store comments (in-memory "database" for demonstration purposes)
 let comments = [
-    { username: 'SuperMario123', comment: 'Wahoo my dudes', timestamp: new Date() },
-    { username: 'Mr. L,', comment: 'you suck mario', timestamp: new Date() },
-    { username: 'Princess Bro-stool', comment: 'Have you guys ever noticed that toad kinda looks like a...', timestamp: new Date() }
+    { username: 'SuperMario123', comment: 'Wahoo! Its a me! Mario', timestamp: new Date() },
+    { username: 'Mr_L_420', comment: 'You stink Mario!', timestamp: new Date() },
+    { username: 'KingKoopa', comment: 'Haha get wrecked', timestamp: new Date() }
 ];
 
 // Endpoint to get all comments

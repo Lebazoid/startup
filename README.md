@@ -51,3 +51,19 @@ This deliverable added some much-needed functinonality to the site. I added a wh
 * <b>Application Logic:</b> When a new comment appears on the discussion board, the user's screen will automatically scroll to the bottom to see the new message. Users may comment whatever they like.
 
 * <b>Other functionality added for fun:</b> On the 'Meet the Characters' page, clicking on a characters image will open a collapsible with a smooth animation, containing a brief description of the character. These plus the map should give people some things to talk about even without reading the full book. You can read those and learn about the characters I've made! They're very cool, and they don't bite. My favorite is Ezlo. Who is yours?
+
+## Service Deliverable
+For this deliverable I added backend endpoints that store comments that recieve and store comments, and returns them when a user loads a page, as well as backend endpoints that store a user's profile information, including a bio and favorite character.
+
+* **Node.js/Express HTTP service** - Implemented.
+
+* **Static middleware for frontend** - Implemented.
+
+* **Calls to third party endpoints** - On the index page, a new inspirational quote will be displayed below the links each time the page is refreshed!
+
+* **Backend service endpoints** - 
+Endpoint to get all comments when the discussion page is loaded. Endpoint to add a new comment. Endpoint to store user profile information, and endpoint to retrieve it when profile page is opened. Endpoint to update user profile data when edited.
+
+* **Frontend calls service endpoints** - The frontend uses the fetch function to call each endpoint when necessary.
+
+*To see how all of this works, log in with a new username, leave some comments, and update your profile information. Then, log out from the profile page, and log in again using a different username - you should see the comments from the previous username still in the discussion board, but you will see this profile has no information. Go ahead and update this profile with a different bio and different favorite character! You will find that if you log out again and switch back to your original username, the profile will have retained its unique information! The system will store profiles unique to each username in session storage.*
