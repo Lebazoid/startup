@@ -1,31 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>"*****'s profile"</title>
+    <title>User's Profile</title>
 </head>
-
 <body>
     <!-- Link home -->
     <header>
         <h2><a href="index.html">King of the Beasts - A novel by Caleb Lay</a></h2>
-      </header>
-      <hr>
+        <link rel="stylesheet" type="text/css" href="CSS_Profile.css">
+    </header>
+    <hr>
     <!-- Header -->
     <header>
-        <h1>*Display User's Username Here</h1>
+        <h1 id="usernameHeader">User's Profile</h1>
     </header>
-      
-        <main>
-            <p>Display recent posts and comments by this user</p>
-        </main>
-    
 
-    <!-- Footer -->
-    <footer>
-        
-    </footer>
+    <!-- Bio and Favorite Character Section -->
+    <div id="bioFavoriteCharacterSection">
+        <p>
+            Bio: <span id="bioDisplay"></span>
+        </p>
+        <p>
+            Favorite Character: <span id="favoriteCharacterDisplay"></span>
+        </p>
+    </div>
 
+    <!-- Edit Profile Button -->
+    <button id="editProfileButton">Edit Profile</button>
+
+    <!-- Edit Profile Form -->
+    <div id="editProfileForm" style="display: none;">
+        <form id="profileForm">
+            <p>
+                Bio: <input type="text" id="bioInput">
+            </p>
+            <p>
+                Favorite Character: <input type="text" id="favoriteCharacterInput">
+            </p>
+            <p>
+                <input type="submit" value="Save Profile" id="saveProfileButton">
+            </p>
+        </form>
+    </div>
+
+    <!-- Logout Button -->
+    <button id="logoutButton">Logout</button>
+
+    <script>
+        // Fetch and display user's profile data
+        window.onload = function () {
+            const username = sessionStorage.getItem('username');
+            document.getElementById('usernameHeader').textContent = `${username}'s Profile`;
+
+            // Fetch user's profile data
+            fetch(`/api/profile?username=${username}`) // Include the username in the request URL
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('bioDisplay').textContent = data.bio;
+                    document.getElementById('favoriteCharacterDisplay').textContent = data.favoriteCharacter;
+                })
+                .catch(error => console.error('Error fetching profile:', error));
+        }
+
+        // Edit Profile Button Functionality
+        const editProfileButton = document.getElementById('editProfileButton');
+        editProfileButton.addEventListener('click', function () {
+            // Toggle visibility of edit profile form
+            const editProfileForm = document.getElementById('editProfileForm');
+            editProfileForm.style.display = editProfileForm.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Save Profile Functionality
+        document.getElementById('profileForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+            const bio = document.getElementById('bioInput').value;
+            const favoriteCharacter = document.getElementById('favoriteCharacterInput').value;
+            const username = sessionStorage.getItem('username'); // Get the username
+
+            // Update displayed bio and favorite character
+            document.getElementById('bioDisplay').textContent = bio;
+            document.getElementById('favoriteCharacterDisplay').textContent = favoriteCharacter;
+
+            // Call server-side endpoint to save profile information
+            fetch('/api/profile', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    username: username, // Include the username in the request body
+                    bio: bio,
+                    favoriteCharacter: favoriteCharacter
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                // Profile saved successfully, show success message or redirect
+                alert('Profile saved successfully!');
+                // Hide edit profile form
+                document.getElementById('editProfileForm').style.display = 'none';
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+                // Handle error
+            });
+        });
+
+        // Logout Functionality
+        const logoutButton = document.getElementById('logoutButton');
+        logoutButton.addEventListener('click', function () {
+            // Clear session storage
+            sessionStorage.clear();
+            // Redirect to login page
+            window.location.href = 'Login.html';
+        });
+    </script>
 </body>
-
 </html>

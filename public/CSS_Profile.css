@@ -4,35 +4,36 @@ header {
     padding: 20px;
     position: relative;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-  }
+}
 
-  header h2 {
+header h2 {
     margin: 0;
-  }
-  
-  header a {
-    text-decoration: none;
-    color: #100000; 
-  }
-  
-  header a:hover {
-    color: #555; 
-  }
+}
 
-  header h1 {
-    margin:0
-  }
-  header b {
+header a {
     text-decoration: none;
-    color: #100000; 
-  }
-  
-  header b:hover {
-    color: #555; 
-  }
-  
+    color: #100000;
+}
+
+header a:hover {
+    color: #555;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header b {
+    text-decoration: none;
+    color: #100000;
+}
+
+header b:hover {
+    color: #555;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -40,7 +41,7 @@ body {
     background-color: #e1c699; /* Main background color */
 }
 
-.container {
+#bioFavoriteCharacterSection {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -49,31 +50,24 @@ body {
     background-color: #f0f0f0; /* Container background color */
 }
 
-.comment {
-    margin-bottom: 20px;
-    background-color: #ffffff; /* Comment background color */
-}
-
-.comment h3 {
-    margin-top: 0;
-    color: #333333; /* Comment text color */
-}
-
-.comment p {
+#bioFavoriteCharacterSection p {
     margin-bottom: 10px;
 }
 
 form {
     margin-top: 20px;
     background-color: #ffffff; /* Form background color */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-form input[type="text"],
-form textarea {
-    width: 75%;
+form input[type="text"] {
+    width: 100%; /* Full width */
     padding: 10px;
     margin-bottom: 10px;
-    margin-right: 100px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -90,18 +84,19 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #000000; /* Form button hover background color */
 }
-  /* Footer Styling */
-  footer {
+
+/* Footer Styling */
+footer {
     text-align: center;
     margin-top: 20px;
-  }
-  
-  .footer-link {
+}
+
+.footer-link {
     display: inline-block;
     margin: 0 10px;
-  }
-  
-  .footer-link img {
-    width: 40px; 
+}
+
+.footer-link img {
+    width: 40px;
     height: 40px;
-  }
+}

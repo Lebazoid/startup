@@ -35,6 +35,31 @@ apiRouter.post('/comments', (req, res) => {
     res.status(201).json(newComment);
 });
 
+// Object to store user profiles (in-memory "database" for demonstration purposes)
+let userProfiles = {};
+
+// Endpoint to retrieve user profile data
+apiRouter.get('/profile', (req, res) => {
+    const username = req.query.username; // Assuming username is passed in query parameter
+    const userProfile = userProfiles[username];
+    if (!userProfile) {
+        return res.status(404).json({ error: 'User profile not found' });
+    }
+    res.json(userProfile);
+});
+
+// Endpoint to update user profile data
+apiRouter.post('/profile', (req, res) => {
+    const username = req.body.username; // Assuming username is passed in request body
+    const { bio, favoriteCharacter } = req.body;
+
+    // Update user profile in storage
+    userProfiles[username] = { bio, favoriteCharacter };
+
+    res.json({ message: 'User profile updated successfully' });
+});
+
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
