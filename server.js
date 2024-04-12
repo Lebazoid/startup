@@ -15,7 +15,7 @@ let comments = [
     { username: 'Mr. L,', comment: 'you suck mario', timestamp: new Date() },
     { username: 'Princess Bro-stool', comment: 'Have you guys ever noticed that toad kinda looks like a...', timestamp: new Date() }];
 
-// Define endpoints
+// Endpoints VVV
 
 // Endpoint to get all comments
 app.get('/api/comments', (req, res) => {
