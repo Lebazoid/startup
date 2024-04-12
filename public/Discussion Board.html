@@ -13,6 +13,7 @@
 <body>
 <div class="container">
     <h1>Discussion Board</h1>
+    
     <!-- Comments Section -->
     <div class="comments" id="comment-container">
         <!-- Existing comments will be loaded here -->
@@ -38,6 +39,7 @@
         var username = sessionStorage.getItem('username');
         // Set the value of the input field
         usernameInput.value = username;
+
 
         // Function to fetch comments from the server and display them
         function fetchComments() {

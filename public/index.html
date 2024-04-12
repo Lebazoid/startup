@@ -30,22 +30,15 @@
        <p>Step into a world of magic, mystery, and adventure in this epic adventure across a fantastical land! Ezlo is the young prince of Ostend, a small province in the quiet countryside of the kingdom of Aldea. One fateful day though, a menacing general from the state enters their castle and upheaves his life. He is torn away from his twin sister and sets off to find her, only to discover that there may be far more at stake than just his family. Villains and monsters await at every step of the way, and nobody can be trusted. Can Ezlo face his fears and defeat the general who beat him within an inch of his life? Or is he doomed to fail?</p></section>
        <p>Get your copy of King of the Beasts Volume 1; The Fugitive Prince here!</p>
       <!-- Book Image Section-->
-
+    <section id="Grab">
+      <p>Get your copy of King of the Beasts Volume 1; The Fugitive Prince here!</p>
+    </section>
     <section id="Book Image">
       
         <a href="booknotavailable.html"> 
             <img src="LOGO_Book.png" alt="Book Image and link">
       </a>
       </section>
-
-      <!-- Books Sold Section -->
-
-      <section id="Books Sold">
-      
-      <p>Books Sold so far; X (placeholder)</p>
-      <hr>
-
-    </section>
 
       <!-- Links Sections -->
 
@@ -67,6 +60,11 @@
         </div>
 
     </section>
+    <!-- Random Quote Section -->
+    <section id="quote">
+      <h2>Random Inspirational Quote:</h2>
+      <p id="quote-content"></p>
+  </section>
       
       
     </main>
@@ -96,7 +94,23 @@
           </div>
         
     </footer>
+<!-- JavaScript to fetch and display random quote -->
+<script>
+  window.onload = function () {
+      const quoteContent = document.getElementById('quote-content');
 
+      // Fetch random quote from external API
+      fetch('https://api.quotable.io/random')
+          .then(response => response.json())
+          .then(data => {
+              const quote = `${data.content} - ${data.author}`;
+              quoteContent.textContent = quote;
+          })
+          .catch(error => {
+              console.error('Error fetching quote:', error);
+          });
+  }
+</script>
   </body>
 
 </html>

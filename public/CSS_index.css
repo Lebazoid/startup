@@ -50,10 +50,19 @@ header h3[href="login.html"] {
   
   /* Synopsis Styling */
   #synopsis {
+    background-color: #ececec; /* Light gray background */
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
+    padding: 20px; /* Add some padding */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 10px; 
+    border: 10px solid #A67A5B;
   }
   
+  /* Grab Book Styling*/
+  #Grab {
+    font-style: underline;
+  }
   /* Book Image Styling */
   #Book Image {
     display: flex;
@@ -65,10 +74,18 @@ header h3[href="login.html"] {
     max-width: 100%; 
   }
 
-  #Books sold {
-    display: flex;
-    text-align: center;
-  }
+  #quote {
+    background-color: #ececec; 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+    border: 10px solid #A67A5B;
+}
+
+/* Styles for the quote text */
+#quote-content {
+    font-style: italic;
+}
   
   /* Links Section Styling */
   #links {
