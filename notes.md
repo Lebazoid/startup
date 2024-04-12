@@ -14,3 +14,10 @@ Colors:
 
 ## Javascript Notes
 * Most functionality is in the discussion board. Implement further functionality as needed.
+
+## Node Notes
+* Running the server; node server.js
+    open browser to http://localhost:3000 to view site
+    f12 to debug frontend
+    console.log to debug backend
+* Closing Server: ctlr+c
