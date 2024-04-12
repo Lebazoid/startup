@@ -90,12 +90,7 @@
                 `;
             commentContainer.appendChild(newComment);
         }
-        setInterval(() => {
-            let chat = 'Placeholder Comment'; //Mimics Real conversation
-            addComment('Placeholder User', chat);
-            // Scrolls to the newly added comment
-            document.getElementById('comment-' + (document.querySelectorAll('.comment').length - 1)).scrollIntoView({behavior: 'smooth'});
-        }, 5000);
+        
     }
     
     
