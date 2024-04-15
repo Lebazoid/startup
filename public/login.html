@@ -23,6 +23,7 @@
             </p>
             <p>
                 <input type="submit" value="Log In" id="loginButton">
+                <button type="button" id="createButton">Create</button>
             </p>
         </form>
     </main>
@@ -47,7 +48,13 @@
             // Store username in sessionStorage
             sessionStorage.setItem("username", username);
             // Redirect to discussion board
-            window.location.href = "Discussion Board.html";
+            window.location.href = "DiscussionBoard.html"; // Change the URL to your discussion board page
+        });
+
+        document.getElementById("createButton").addEventListener("click", function (event) {
+            event.preventDefault();
+            // Redirect to the discussion board page (same as login for now)
+            window.location.href = "DiscussionBoard.html"; // Change the URL to your discussion board page
         });
     </script>
 </body>
