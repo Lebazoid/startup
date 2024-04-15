@@ -1,9 +1,6 @@
 const express = require('express');
 const app = express();
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
-const dbConfig = require('./dbConfig');
-
-const url = `mongodb+srv://${dbConfig.username}:${dbConfig.password}@${dbConfig.hostname}/`;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
