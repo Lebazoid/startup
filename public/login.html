@@ -29,6 +29,27 @@
     </main>
     <!-- Footer -->
     <footer>
+        <p>I'm not just an author! I'm also a musician. Check out some of my other creative works here;</p>
+        <!-- Spotify Link -->
+        <div class="footer-link">
+            <a href="https://open.spotify.com/artist/1dysstVvD0tQM9OuTmmpMN">
+                <img src="LOGO_Spotify.png" alt="Spotify Link">
+            </a>
+        </div>
+
+        <!-- Apple Music Link -->
+        <div class="footer-link">
+            <a href="https://music.apple.com/us/artist/caleb-lay/1463892463">
+                <img src="LOGO_AppleMusic.png" alt="Apple Music">
+            </a>
+        </div>
+
+        <!-- Instagram Link -->
+        <div class="footer-link">
+            <a href="https://www.instagram.com/lebkazoo/">
+                <img src="LOGO_Instagram.png" alt="Instagram">
+            </a>
+        </div>
     </footer>
     <script>
         document.getElementById("loginForm").addEventListener("submit", function (event) {
@@ -48,39 +69,14 @@
             // Store username in sessionStorage
             sessionStorage.setItem("username", username);
             // Redirect to discussion board
-            window.location.href = "DiscussionBoard.html"; // Change the URL to your discussion board page
+            window.location.href = "Discussion Board.html"; // Change the URL to your discussion board page
         });
 
         document.getElementById("createButton").addEventListener("click", function (event) {
             event.preventDefault();
             // Redirect to the discussion board page (same as login for now)
-            window.location.href = "DiscussionBoard.html"; // Change the URL to your discussion board page
+            window.location.href = "Discussion Board.html"; // Change the URL to your discussion board page
         });
     </script>
 </body>
-<footer>
-
-    <p>I'm not just an author! I'm also a musician. Check out some of my other creative works here;</p>
-      <!-- Spotify Link -->
-      <div class="footer-link">
-          <a href="https://open.spotify.com/artist/1dysstVvD0tQM9OuTmmpMN">
-              <img src="LOGO_Spotify.png" alt="Spotify Link">
-          </a>
-      </div>
-
-      <!-- Apple Music Link -->
-      <div class="footer-link">
-          <a href="https://music.apple.com/us/artist/caleb-lay/1463892463">
-              <img src="LOGO_AppleMusic.png" alt="Apple Music">
-          </a>
-      </div>
-
-      <!-- Instagram Link -->
-      <div class="footer-link">
-          <a href="https://www.instagram.com/lebkazoo/">
-              <img src="LOGO_Instagram.png" alt="Instagram">
-          </a>
-        </div>
-      
-  </footer>
 </html>
