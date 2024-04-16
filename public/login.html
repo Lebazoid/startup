@@ -72,6 +72,8 @@
         })
         .then(response => {
             if (response.ok) {
+                // Set username to sessionStorage
+                sessionStorage.setItem("username", username);
                 window.location.href = "DiscussionBoard.html"; // Redirect if login successful
             } else {
                 alert("Invalid username or password");
