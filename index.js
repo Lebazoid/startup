@@ -5,6 +5,9 @@ const app = express();
 const DB = require('./database.js');
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
 
+// Define authCookieName
+const authCookieName = 'authToken'; // You can choose any name you prefer for the authentication cookie
+
 // Middleware to parse JSON bodies
 app.use(express.json());
 
@@ -60,7 +63,7 @@ apiRouter.post('/auth/create', async (req, res) => {
   apiRouter.get('/user/:email', async (req, res) => {
     const user = await DB.getUser(req.params.email);
     if (user) {
-      const token = req?.cookies.token;
+      const token = req?.cookies[authCookieName]; // Use authCookieName here
       res.send({ email: user.email, authenticated: token === user.token });
       return;
     }
